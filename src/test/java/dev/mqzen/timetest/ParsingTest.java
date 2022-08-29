@@ -32,7 +32,7 @@ public class ParsingTest {
 
 	@Test
 	public void complexMultipleTimeInput() {
-		String input = "3654234d, 600hours, 700minutes, 991sec";
+		String input = "3654234d, 600hours, 700minutes, 911sec";
 		TimeParser parser = TimeParser.of(input);
 		Assertions.assertEquals(3654234,parser.getDays());
 		Assertions.assertEquals(600, parser.getHours());
