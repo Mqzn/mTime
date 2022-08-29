@@ -32,13 +32,17 @@ public final class TimeFormatter {
 			return;
 		}
 
-		TimeParser parser = TimeParser.parse(period);
+		new TimeFormatter(TimeParser.parse(period));
+
+	}
+
+	private TimeFormatter (@NonNull TimeParser parser) {
 		this.days = parser.getDays();
 		this.hours = parser.getHours();
 		this.minutes = parser.getMinutes();
 		this.seconds = parser.getSeconds();
-
 	}
+
 	private TimeFormatter(LocalDateTime localDateTime) {
 		this.days = localDateTime.getDayOfMonth();
 		this.hours = localDateTime.getHour();
