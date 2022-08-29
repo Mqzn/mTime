@@ -11,7 +11,7 @@ of the issue  you find, whether it's a bug or a suggestion
 or whatever.
 
 ## Installation 
-[!(https://jitpack.io/v/Mqzn/mTime.svg)](https://jitpack.io/#Mqzn/mTime)
+[![](https://jitpack.io/v/Mqzn/mTime.svg)](https://jitpack.io/#Mqzn/mTime)
 
 If you're using a dependency manager software like maven or gradle
 then this project is suitable for you.
