@@ -161,7 +161,5 @@ you can also format the time from a `LocalDateTime`
 		
 ```
 ### Extra information
-This project has been built using JDK8, and
-Iam the only author of this project.
-
+This project has been built using JDK8.
 Thanks for viewing this project !
