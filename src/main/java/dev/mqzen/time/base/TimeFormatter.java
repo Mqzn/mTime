@@ -32,7 +32,7 @@ public final class TimeFormatter {
 			return;
 		}
 
-		TimeParser parser = TimeParser.of(period);
+		TimeParser parser = TimeParser.parse(period);
 		this.days = parser.getDays();
 		this.hours = parser.getHours();
 		this.minutes = parser.getMinutes();

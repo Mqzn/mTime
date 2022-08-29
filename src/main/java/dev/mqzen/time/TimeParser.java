@@ -52,11 +52,11 @@ public final class TimeParser {
 
 	}
 
-	public static TimeParser of(String timePeriod) {
+	public static TimeParser parse(String timePeriod) {
 		return new TimeParser(timePeriod);
 	}
 
-	public static TimeParser of(long millis) {
+	public static TimeParser parse(long millis) {
 		return new TimeParser(millis);
 	}
 
