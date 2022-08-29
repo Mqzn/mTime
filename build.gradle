@@ -10,8 +10,11 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    compileOnly'org.projectlombok:lombok:1.18.24'
+    annotationProcessor('org.projectlombok:lombok:1.18.24')
+    implementation 'org.checkerframework:checker-qual:3.24.0'
+    compileOnly "net.kyori:adventure-api:4.11.0"
+    implementation 'org.junit.jupiter:junit-jupiter:5.9.0'
 }
 
 test {
