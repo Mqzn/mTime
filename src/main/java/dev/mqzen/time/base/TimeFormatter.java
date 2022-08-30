@@ -7,28 +7,25 @@ import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
+
 import java.time.LocalDateTime;
 
 /**
  * A simple class to format the results
  * from a time parsing which is usually
  * from the class {@link TimeParser}
- * @see TimeParser
  *
  * @author Mqzen
+ * @see TimeParser
  */
 @Getter
 public final class TimeFormatter {
 
 	private @Getter long days, hours, minutes, seconds;
 
-	public static TimeFormatter of(String period) {
-		return new TimeFormatter(period);
-	}
-
 	private TimeFormatter(@Nullable String period) {
 		//period are like "1d2h3m4s"
-		if(period == null) {
+		if (period == null) {
 			return;
 		}
 
@@ -36,7 +33,7 @@ public final class TimeFormatter {
 
 	}
 
-	private TimeFormatter (@NonNull TimeParser parser) {
+	private TimeFormatter(@NonNull TimeParser parser) {
 		this.days = parser.getDays();
 		this.hours = parser.getHours();
 		this.minutes = parser.getMinutes();
@@ -57,6 +54,10 @@ public final class TimeFormatter {
 		this.seconds = seconds;
 	}
 
+	public static TimeFormatter of(String period) {
+		return new TimeFormatter(period);
+	}
+
 	public static @NonNull TimeFormatter of(int days, int hours, int minutes, int seconds) {
 		return new TimeFormatter(days, hours, minutes, seconds);
 	}
@@ -68,24 +69,21 @@ public final class TimeFormatter {
 
 
 	/**
-	 *
 	 * Simple method to format the time data
 	 * collected from the parser {@link TimeParser}
 	 *
 	 * @param showLargestOnly whether to show the time unit
-	 * with the largest value or not
-	 * @param primaryColor the main color which is showed on
-	 * the values of each unit
-	 * @param secondaryColor the other color which is showed on
-	 * the names of each unit
-	 *
-	 *
+	 *                        with the largest value or not
+	 * @param primaryColor    the main color which is showed on
+	 *                        the values of each unit
+	 * @param secondaryColor  the other color which is showed on
+	 *                        the names of each unit
 	 * @return the full format of the time
 	 */
 	public @NonNull TextComponent format(boolean showLargestOnly,
 	                                     NamedTextColor primaryColor,
 	                                     NamedTextColor secondaryColor) {
-		if(days == 0 && hours == 0 && minutes == 0 && seconds == 0) {
+		if (days == 0 && hours == 0 && minutes == 0 && seconds == 0) {
 			return Component.text("Forever", primaryColor);
 		}
 
@@ -103,7 +101,7 @@ public final class TimeFormatter {
 						.append(Component.text(seconds > 1 ? " Seconds " : " Second ", secondaryColor));
 
 		TextComponent res = Component.text().build();
-		if(showLargestOnly) {
+		if (showLargestOnly) {
 			if (days >= 1) {
 				res = res.append(formattedDays);
 			} else if (hours >= 1) {
@@ -114,21 +112,21 @@ public final class TimeFormatter {
 				res = res.append(formattedSeconds);
 			}
 
-		}else {
+		} else {
 
-			if(days >= 1) {
+			if (days >= 1) {
 				res = res.append(formattedDays);
 			}
 
-			if(hours >= 1) {
+			if (hours >= 1) {
 				res = res.append(formattedHours);
 			}
 
-			if(minutes >= 1) {
+			if (minutes >= 1) {
 				res = res.append(formattedMinutes);
 			}
 
-			if(seconds >= 1) {
+			if (seconds >= 1) {
 				res = res.append(formattedSeconds);
 			}
 

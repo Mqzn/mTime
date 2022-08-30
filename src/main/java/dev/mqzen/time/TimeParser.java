@@ -1,5 +1,12 @@
 package dev.mqzen.time;
 
+/**
+ * The main class that is used to parse time strings inputs
+ * The algorithm is fully written by me (aka Mqzen)
+ * Make sure to know just when to use it properly :D !
+ *
+ * @author Mqzen
+ */
 public final class TimeParser {
 
 	private long days, hours, minutes, seconds;

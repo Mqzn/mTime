@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 /**
- *
  * An interface to represent durations
  * and other info about
  * it also holds more info that can be very useful
@@ -17,7 +16,6 @@ import java.time.LocalTime;
  * As they say, simple but powerful and useful
  *
  * @author Mqzen
- *
  */
 public interface IDuration {
 

@@ -14,7 +14,10 @@ or whatever.
 [![](https://jitpack.io/v/Mqzn/mTime.svg)](https://jitpack.io/#Mqzn/mTime)
 
 If you're using a dependency manager software like maven or gradle
-then this project is suitable for you.
+then just follow the steps below to setup your project
+and allow it to use the power of mTime !
+otherwise, just [Download](https://github.com/Mqzn/mTime/releases/tag/1.1) the jar and add it as an artifact dependency
+
 
 ### Step 1: Add the repository
 

@@ -13,16 +13,15 @@ import java.util.List;
  * a multiple identifiers in case of different inputs
  * that may have more than one identifier for each unit
  *
+ * @author Mqzen
+ * <p>
+ * Made by passion <3
  * @see dev.mqzen.time.utility.TimeUtility
  * @see dev.mqzen.time.TimeParser
- *
- *
+ * <p>
+ * <p>
  * Note: an identifier is a string that identifies that
  * type of the time unit stated
- *
- * @author Mqzen
- *
- * Made by passion <3
  */
 public enum Unit {
 

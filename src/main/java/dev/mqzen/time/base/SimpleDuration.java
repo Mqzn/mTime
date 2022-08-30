@@ -6,15 +6,16 @@ import lombok.NonNull;
 import net.kyori.adventure.text.TextComponent;
 import org.checkerframework.checker.nullness.qual.Nullable;
 import org.jetbrains.annotations.NotNull;
+
 import java.sql.Date;
 import java.sql.Time;
 import java.time.LocalDateTime;
 
 /**
  * A basic implementation of the duration interface {@link IDuration}
- * @see IDuration
  *
  * @author Mqzen
+ * @see IDuration
  */
 
 public final class SimpleDuration implements IDuration {
@@ -45,8 +46,8 @@ public final class SimpleDuration implements IDuration {
 
 	@Override
 	public boolean hasExpired() {
-		long currentSeconds = System.currentTimeMillis()/1000;
-		long totalSeconds = totalDuration/1000;
+		long currentSeconds = System.currentTimeMillis() / 1000;
+		long totalSeconds = totalDuration / 1000;
 		return (currentSeconds - totalSeconds >= 0L);
 	}
 

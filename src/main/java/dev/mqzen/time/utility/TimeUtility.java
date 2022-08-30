@@ -6,27 +6,26 @@ import dev.mqzen.time.base.Unit;
 import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.checkerframework.checker.nullness.qual.NonNull;
+
 import java.time.LocalDateTime;
 
 /**
- *
  * The class used to provide extremely useful
  * methods that are utilized to provide
  * fancy formats or vital calculations to make
  * stuff easier
  *
- * @see IDuration
  * @author Mqzen
+ * @see IDuration
  */
 public class TimeUtility {
 
 
 	/**
-	 *
-	 * @deprecated Pretty useless...but may be useful for others, so I kept it
 	 * @param str checking if the input contains single unit stated
 	 * @return whether if time input shows only a single unit
 	 * along with its value
+	 * @deprecated Pretty useless...but may be useful for others, so I kept it
 	 */
 	@Deprecated
 	public static boolean isSingleTime(String str) {
@@ -65,11 +64,10 @@ public class TimeUtility {
 	}
 
 	/**
-	 * @deprecated Pretty useless...but may be useful for others, so I kept it
-	 *
 	 * @param format checking if the input contains single unit stated
 	 * @return whether if time input shows only a single unit
 	 * along with its value
+	 * @deprecated Pretty useless...but may be useful for others, so I kept it
 	 */
 	@Deprecated
 	public static boolean isMultiTime(String format) {
@@ -100,15 +98,13 @@ public class TimeUtility {
 	 * @return the formatted remaining time from that point ('totalDuration')
 	 */
 	public static TextComponent formatRemainingTime(long totalDuration) {
-		long differenceInTime = totalDuration-System.currentTimeMillis();
+		long differenceInTime = totalDuration - System.currentTimeMillis();
 		return formatDifference(differenceInTime);
 	}
 
 	/**
-	 *
 	 * @param startDuration the starting point but in the
 	 *                      form of a duration object
-	 *
 	 * @return the format of the difference in
 	 * time between duration in the future and now
 	 */
